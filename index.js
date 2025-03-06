@@ -55,6 +55,8 @@ const dataSources = {
 // 默认数据源
 let currentDataSource = "upup";
 let dataSourceTemp = "upup";
+// 顺序标注
+let checkLength = 10;
 setName(`upup`, `upup`);
 
 // 切换数据源
@@ -139,20 +141,32 @@ function setName(name, s) {
 }
 
 // 创建按钮
-function createButtons(containerId, data, title) {
+function createButtons(containerId, data) {
   const container = containers[containerId];
   if (!container) return;
 
   container.innerHTML = ""; // 清空容器
 
-  Object.keys(data).forEach((key) => {
+  const keys = Object.keys(data);
+  const btnList = []; // 存储按钮，确保顺序
+
+  for (let i = keys.length - 1; i >= 0; i--) {
+    const key = keys[i];
     const btn = document.createElement("button");
     btn.textContent = key;
+
+    if (containerId == `DailyData`) {
+      if (i < keys.length - checkLength) {
+        btn.style.borderBottom = `3px solid black`;
+      }
+    } else if(containerId != `AppData`){
+      btn.style.borderBottom = `3px solid black`;
+    }
 
     if (key.includes("图")) {
       // 处理图片按钮
       if (data[key] == `` || data[key] == null) {
-        return;
+        continue;
       }
 
       const progressBarContainer = document.createElement("div");
@@ -180,8 +194,11 @@ function createButtons(containerId, data, title) {
       btn.onclick = () => copyToClipboard(data[key], btn);
     }
 
-    container.appendChild(btn);
-  });
+    btnList.unshift(btn); // 先存起来，保持顺序
+  }
+
+  // 按正确顺序添加到容器
+  btnList.forEach((btn) => container.appendChild(btn));
 }
 
 // 更新按钮
