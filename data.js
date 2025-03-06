@@ -11,8 +11,12 @@ banana2 = `https://web.yakoo.one/`;
 banana3 = `https://go.bananapro.club/`;
 
 flyint1 = `https://to.FlyintPro.com`;
+flyint2 = `https://www.flyintpro04.com/`;
+flyint3 = `https://www.flyintpro05.com`;
+flyint3 = `https://www.flyintpro06.com`;
+flyint31 = `https://node.flyintpro06.com`
 
-shaoshupai1 = `https://sspai.ink`
+shaoshupai1 = `https://sspai.ink`;
 
 miaomiao1 = `https://mm.yakoo.one/`;
 miaomiao2 = `https://kda03.abcabclink.net/auth/login`;
@@ -33,7 +37,7 @@ shaoshupaiOFF = `25年蛇年大吉优惠活动来啦，每天限量100兑换，�
 全场套餐88折优惠券：oF7wWVn2
 将对每天第9/19/29/39/49/59/69/79/89/99位购买的用户订单返还50%金额至余额，5%概率返回100%金额到账户余额。(大家最喜欢的抽奖活动)
 限时开启双倍邀请返利
-*活动时间(25年2月5日24点结束)`
+*活动时间(25年2月5日24点结束)`;
 miaomiaoOFF = `25年蛇年大吉优惠活动来啦，每天限量100兑换，先抢先得！
 全场套餐88折优惠券：oF7wWVn2
 将对每天第9/19/29/39/49/59/69/79/89/99位购买的用户订单返还50%金额至余额，5%概率返回100%金额到账户余额。(大家最喜欢的抽奖活动)
@@ -387,7 +391,6 @@ const cloudupupAndroidData = {
 
 //   -------------------- 分隔符 --------------------
 
-
 const bananaSelfData = {
   最新官网域名: `官网链接-永久域名: ${banana1}
   备用付款地址: ${banana2}price
@@ -422,6 +425,10 @@ const flyintSelfData = {
   最新官网域名: `请收藏好网站发布页哦
 ${flyint1}
 PS:点击link1 或 link2 即可跳转到官网`,
+  订阅问题: `把订阅连接的域名 >> ${flyint31} 替换成 
+${flyint2}
+或者
+${flyint3} `,
   重新导入订阅: `您试试改下您的订阅地址去重新导入下
   复制订阅地址出来  然后把 旧域名 换成 新域名
   (后面的不变 只需要改动域名)
@@ -431,14 +438,52 @@ PS:点击link1 或 link2 即可跳转到官网`,
  
   或者 订阅地址发我看看, 这边帮您排查下噢`,
   无优惠活动: `实在抱歉, 最近没什么活动
-  一般情况下节假日才有活动噢 可以随时关注官网公告即可`
+  一般情况下节假日才有活动噢 可以随时关注官网公告即可`,
+  套餐问题: `同一个套餐可以叠加，不同套餐只会重置。(200G和500G 不限时流量，不是同一个套餐）
+    如果是续费同一个套餐的话，（尤其不限时的）请截图发给客服当前剩余流量。以及已购买套餐的支付凭证
+    ！！支付凭证需带商户！！！`,
+  USDT付款: `${idinshop}buy/9
+    到上方按照套餐价格拍一下，拍完给我发支付截图。如微信或支付宝含有商户的截图哦
+    或者是USDT支付成功的截图`,
 };
 const flyintDailyData = { ...flyintSelfData, ...generalData };
 const flyintAppData = cloudupupAppData;
-const flyintIOSData = {};
-const flyintWinData = {};
+const flyintIOSData = {
+  ios更新订阅: `1. 关闭Shadowrocket连接。
+  2. 在小火箭首页=>从右往左滑=>删除旧线路
+  3. 使用苹果自带浏览器登录以下官网:
+  ${flyint2}
+  
+  4. 在官网底部找到订阅地址
+  登录网站 -> 仪表盘 ->捷径-> 一键订阅 -> 复制订阅地址
+  5. 返回小火箭 => 右上角+号，类型选：subscribe，URL的地方粘贴。
+  6. 选择任何国家的节点, 将全局路由改为 代理 模式
+  然后打开 连接 即可继续使用
+  
+  (复制去浏览器打开~)`,
+};
+const flyintWinData = {
+  clash使用教程: `clash使用教程
+  1. 登录官网，主页下方有使用教程，点击进去即可看到对应的客户端。
+  ${flyint1}
+  2. 安装完成后，点击官网主页下方的一键订阅，选择导入到clash的选项即可
+  
+  电脑的请解压到：C盘>>program file>>clash， 然后右键以管理员身份运行`,
+  clash排查问题: `请按照以下方法排查，
+  1. 确保是安装在C盘program file里面
+  2. 如果不是在C盘的话，请移到C盘program file 右键以管理员模式运行
+  3. 不支持新疆或海外地区使用，如果您是以上地区请提供支付截图给我。这边给您转到可用平台
+  4. 退出杀毒软件，打开clash>>tun模式，然后打开控制面板》》网络与共享中心》》clash，点击一下》》属性》》ipv4》》全选自动
+  5. 请确保用的是最新订阅地址， www.flyintpro05.com 这里重新导入的`,
+};
 const flyintMacData = {};
-const flyintAndroidData = {};
+const flyintAndroidData = {
+  安卓clash: `1. 登录官网，主页下方有使用教程，点击进去即可看到对应的客户端。
+  ${flyint1}
+  2. 安装完成后，点击官网主页下方的一键订阅，选择导入到clash的选项即可
+  
+  电脑的请解压到：C盘>>program file>>clash， 然后右键以管理员身份运行`,
+};
 
 //   -------------------- 分隔符 --------------------
 
