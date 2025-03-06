@@ -118,7 +118,7 @@ function preloadImage(url, progressBarContainer, progressBar) {
 function setName(name, s) {
   const h5 = document.getElementById("nameContainer");
   h5.textContent = name + "快捷回复";
-  h5.style.color = "white"
+  h5.style.color = "white";
   switch (s) {
     case "upup":
       h5.style.background = "red";
@@ -139,7 +139,7 @@ function setName(name, s) {
 }
 
 // 创建按钮
-function createButtons(containerId, data) {
+function createButtons(containerId, data, title) {
   const container = containers[containerId];
   if (!container) return;
 
@@ -148,10 +148,6 @@ function createButtons(containerId, data) {
   Object.keys(data).forEach((key) => {
     const btn = document.createElement("button");
     btn.textContent = key;
-
-    if(key.includes("最新官网域名")){
-      btn.style.background = `red`
-    }
 
     if (key.includes("图")) {
       // 处理图片按钮
@@ -199,12 +195,12 @@ function updateButtons() {
   // 清空已有按钮，避免重复渲染
   Object.values(containers).forEach((container) => (container.innerHTML = ""));
 
-  createButtons("DailyData", data.DailyData);
-  createButtons("AppData", data.AppData);
-  createButtons("IOSData", data.IOSData);
-  createButtons("WinData", data.WinData);
-  createButtons("MacData", data.MacData);
-  createButtons("AndroidData", data.AndroidData);
+  createButtons("DailyData", data.DailyData, currentDataSource);
+  createButtons("AppData", data.AppData, currentDataSource);
+  createButtons("IOSData", data.IOSData, currentDataSource);
+  createButtons("WinData", data.WinData, currentDataSource);
+  createButtons("MacData", data.MacData, currentDataSource);
+  createButtons("AndroidData", data.AndroidData, currentDataSource);
 }
 
 // 创建切换数据源按钮
