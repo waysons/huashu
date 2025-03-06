@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: white;
+        padding-left: 25px;
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+      button {
+        margin: 5px 10px;
+        min-width: 150px;
+        height: 30px;
+        border: 0;
+        box-sizing: border-box;
+        font-weight: 700;
+        border-radius: 5px;
+        background-color: gainsboro;
+        color: rgb(0, 0, 32);
+      }
+      button:hover {
+        box-shadow: 4px 2px 8px 1px gray;
+      }
+      div {
+        margin: 10px 0;
+      }
+      h5 {
+        margin-left: 50px;
+        color: red;
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 0;
+      }
+      span {
+        z-index: 1;
+        border-bottom: 1px solid purple;
+        margin: 0 20px;
+      }
+      span:hover {
+        cursor: pointer;
+      }
+    </style>
+    <script defer src="data.js"></script>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <h2 id="nameContainer"></h2>
+    <h5 style="margin-left: 0; padding-left: 50px; color: purple">
+      <span onclick="fapiao()">开发票</span>
+      <span onclick="holidayOFF()">节日活动优惠复制</span>
+    </h5>
+
+    <h5>日常快捷回复</h5>
+    <div id="DailyData"></div>
+    <h5>各种软件问题</h5>
+    <div id="AppData"></div>
+    <h5>iOS/iPad</h5>
+    <div id="IOSData"></div>
+    <h5>Windows电脑</h5>
+    <div id="WinData"></div>
+    <h5>Mac电脑</h5>
+    <div id="MacData"></div>
+    <h5>Android手机</h5>
+    <div id="AndroidData"></div>
+    <h5 style="margin-bottom: 100px"></h5>
+  </body>
+</html>
