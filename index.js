@@ -11,7 +11,6 @@ const containers = {
 // 数据源定义
 const dataSources = {
   upup: {
-    TempData: cloudupupTempData,
     DailyData: cloudupupDailyData,
     AppData: cloudupupAppData,
     IOSData: cloudupupIOSData,
@@ -20,7 +19,6 @@ const dataSources = {
     AndroidData: cloudupupAndroidData,
   },
   banana: {
-    TempData: bananaTempData,
     DailyData: bananaDailyData,
     AppData: bananaAppData,
     IOSData: bananaIOSData,
@@ -29,7 +27,6 @@ const dataSources = {
     AndroidData: bananaAndroidData,
   },
   flyint: {
-    TempData: flyintTempData,
     DailyData: flyintDailyData,
     AppData: flyintAppData,
     IOSData: flyintIOSData,
@@ -38,7 +35,6 @@ const dataSources = {
     AndroidData: flyintAndroidData,
   },
   ssp: {
-    TempData: shaoshupaiTempData,
     DailyData: shaoshupaiDailyData,
     AppData: shaoshupaiAppData,
     IOSData: shaoshupaiIOSData,
@@ -47,7 +43,6 @@ const dataSources = {
     AndroidData: shaoshupaiAndroidData,
   },
   miao: {
-    TempData: miaomiaoTempData,
     DailyData: miaomiaoDailyData,
     AppData: miaomiaoAppData,
     IOSData: miaomiaoIOSData,
@@ -153,6 +148,10 @@ function createButtons(containerId, data) {
   Object.keys(data).forEach((key) => {
     const btn = document.createElement("button");
     btn.textContent = key;
+
+    if(key.includes("最新官网域名")){
+      btn.style.background = `red`
+    }
 
     if (key.includes("图")) {
       // 处理图片按钮
@@ -267,15 +266,9 @@ function copyToClipboard(text, button) {
     });
 }
 
-// 复制临时文本
+// 跳转开发票文本
 function fapiao() {
   window.open("http://fp.imwayson.com/", "_blank");
-}
-
-// 节日活动优惠
-function holidayOFF() {
-  let hhh = dataSources[dataSourceTemp].TempData.holidayOFF;
-  console.log(hhh);
 }
 
 // 复制图片
@@ -289,6 +282,11 @@ async function copyImage(value, button) {
     img.src = value;
     await img.decode();
 
+    button.style.backgroundColor = "lime";
+    setTimeout(() => {
+      button.style.backgroundColor = "";
+    }, 500);
+
     // 创建 Canvas 并绘制图片
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
@@ -301,15 +299,10 @@ async function copyImage(value, button) {
       canvas.toBlob(resolve, "image/png")
     );
 
-    button.style.backgroundColor = "lime";
-    setTimeout(() => {
-      button.style.backgroundColor = "";
-    }, 500);
-
     await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
   } catch (err) {
     console.error("复制失败:", err);
-    alert("复制失败，可能是浏览器不支持");
+    alert("复制失败! 可能是延迟或浏览器不支持, 重新复制下试试看");
   } finally {
     if (button) button.disabled = false;
     document.body.style.pointerEvents = "auto";

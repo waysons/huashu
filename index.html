@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="icon"
+      href="https://s.pinimg.com/webapp/favicon_48x48-7470a30d.png"
+      type="image/png"
+    />
+    <title>工作快捷回复</title>
     <style>
       body {
         background-color: white;
@@ -12,9 +17,9 @@
         -webkit-user-drag: none;
       }
       button {
-        margin: 5px 10px;
-        min-width: 150px;
-        height: 30px;
+        margin: 10px 14px;
+        min-width: 140px;
+        height: 40px;
         border: 0;
         box-sizing: border-box;
         font-weight: 700;
@@ -23,7 +28,7 @@
         color: rgb(0, 0, 32);
       }
       button:hover {
-        box-shadow: 4px 2px 8px 1px gray;
+        cursor: pointer;
       }
       div {
         margin: 10px 0;
@@ -50,8 +55,7 @@
   <body>
     <h2 id="nameContainer"></h2>
     <h5 style="margin-left: 0; padding-left: 50px; color: purple">
-      <span onclick="fapiao()">开发票</span>
-      <span onclick="holidayOFF()">节日活动优惠复制</span>
+      <span onclick="fapiao()">点我开发票</span>
     </h5>
 
     <h5>日常快捷回复</h5>
