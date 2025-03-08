@@ -3,16 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      href="https://s.pinimg.com/webapp/favicon_48x48-7470a30d.png"
-      type="image/png"
-    />
+    <link rel="icon" href="./favicon.png" type="image/png" />
     <title>工作快捷回复</title>
     <style>
       body {
         background-color: white;
         padding-left: 25px;
+        /* 禁止鼠标滑动选中 */
         user-select: none;
         -webkit-user-drag: none;
       }
@@ -22,11 +19,10 @@
         height: 40px;
         border: 0;
         box-sizing: border-box;
-        font-weight: 700;
         border-radius: 5px;
         box-shadow: 1px 2px 2px 1px lightgray;
+        color: black;
         background-color: gainsboro;
-        color: rgb(0, 0, 32);
       }
       button:hover {
         cursor: pointer;
@@ -55,7 +51,7 @@
   </head>
   <body>
     <h2 id="nameContainer"></h2>
-    <h5 style="margin-left: 0; padding-left: 50px; color: purple;">
+    <h5 style="margin-left: 0; padding-left: 50px; color: purple">
       <span onclick="fapiao()">点我开发票</span>
     </h5>
 

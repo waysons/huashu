@@ -55,24 +55,47 @@ const dataSources = {
 // 默认数据源
 let currentDataSource = "upup";
 let dataSourceTemp = "upup";
-// 顺序标注
+// 通用话术的顺序标注
 let checkLength = 10;
-setName(`upup`, `upup`);
+
+// 创建切换数据源按钮
+function createSwitchButtons() {
+  const sources = ["upup", "banana", "flyint", "ssp", "miao"];
+  const sourcesColor = ["red", "gold", "slateblue", "royalblue", "slategray"];
+
+  const buttonContainer = document.createElement("div");
+  sources.forEach((source, index) => {
+    const btn = document.createElement("button");
+    btn.textContent = `${source}`;
+    if (source == `upup`) {
+      btn.style.visibility = "hidden";
+      previousButton = btn;
+    }
+    btn.style.background = sourcesColor[index];
+
+    btn.onclick = () => setDataSource(source, btn);
+    buttonContainer.appendChild(btn);
+  });
+
+  // 设置当前话术页面提示
+  setName(`upup`, `upup`, sourcesColor);
+
+  document.body.insertBefore(buttonContainer, document.body.firstChild);
+}
 
 // 切换数据源
 function setDataSource(source, btn) {
-  // 设置名称显示
   setName(btn.textContent, source);
 
   // 显示所有按钮
   const buttons = document.querySelectorAll("button");
   buttons.forEach((button) => {
-    button.style.visibility = "visible"; // 恢复所有按钮显示
+    button.style.visibility = "visible";
   });
 
   // 隐藏当前点击的按钮
   if (dataSources[source]) {
-    btn.style.visibility = "hidden"; // 隐藏当前按钮
+    btn.style.visibility = "hidden";
     currentDataSource = source;
   }
 
@@ -83,44 +106,12 @@ function setDataSource(source, btn) {
   updateButtons();
 }
 
-// 预加载图片并更新进度条
-function preloadImage(url, progressBarContainer, progressBar) {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.crossOrigin = "anonymous"; // 避免跨域问题
-    img.src = url;
-
-    img.onload = () => {
-      progressBar.style.width = "0%";
-      setTimeout(() => {
-        progressBarContainer.remove();
-      }, 500);
-      resolve(img);
-    };
-
-    img.onerror = (err) => {
-      progressBar.style.backgroundColor = "gray";
-      reject(err);
-    };
-
-    // 模拟加载进度
-    let progress = 0;
-    const interval = setInterval(() => {
-      if (progress >= 90) {
-        clearInterval(interval);
-      } else {
-        progress += 10;
-        progressBar.style.width = progress + "%"; // 修正进度百分比
-      }
-    }, 300);
-  });
-}
-
-// 隐藏按钮
+// 设置标题并隐藏按钮
 function setName(name, s) {
   const h5 = document.getElementById("nameContainer");
   h5.textContent = name + "快捷回复";
   h5.style.color = "white";
+
   switch (s) {
     case "upup":
       h5.style.background = "red";
@@ -140,70 +131,9 @@ function setName(name, s) {
   }
 }
 
-// 创建按钮
-function createButtons(containerId, data) {
-  const container = containers[containerId];
-  if (!container) return;
-
-  container.innerHTML = ""; // 清空容器
-
-  const keys = Object.keys(data);
-  const btnList = []; // 存储按钮，确保顺序
-
-  for (let i = keys.length - 1; i >= 0; i--) {
-    const key = keys[i];
-    const btn = document.createElement("button");
-    btn.textContent = key;
-
-    if (containerId == `DailyData`) {
-      if (i < keys.length - checkLength) {
-        btn.style.borderBottom = `3px solid black`;
-      }
-    } else if(containerId != `AppData`){
-      btn.style.borderBottom = `3px solid black`;
-    }
-
-    if (key.includes("图")) {
-      // 处理图片按钮
-      if (data[key] == `` || data[key] == null) {
-        continue;
-      }
-
-      const progressBarContainer = document.createElement("div");
-      progressBarContainer.style.cssText =
-        "width: 100%; height: 10px; background-color: lightgray; position: relative; margin-bottom: 10px;";
-
-      const progressText = document.createElement("span");
-      progressText.textContent = "图片加载中...";
-      progressText.style.cssText =
-        "position: absolute; width: 100%; text-align: center; font-size: 12px;";
-
-      const progressBar = document.createElement("div");
-      progressBar.className = "progress-bar";
-      progressBar.style.cssText =
-        "width: 0; height: 100%; background-color: green;";
-
-      progressBarContainer.appendChild(progressText);
-      progressBarContainer.appendChild(progressBar);
-      btn.appendChild(progressBarContainer);
-
-      preloadImage(data[key], progressBarContainer, progressBar);
-      btn.onclick = () => copyImage(data[key], btn);
-    } else {
-      // 处理文本按钮
-      btn.onclick = () => copyToClipboard(data[key], btn);
-    }
-
-    btnList.unshift(btn); // 先存起来，保持顺序
-  }
-
-  // 按正确顺序添加到容器
-  btnList.forEach((btn) => container.appendChild(btn));
-}
-
 // 更新按钮
 function updateButtons() {
-  const data = dataSources[currentDataSource]; // 获取当前数据源的数据
+  const data = dataSources[currentDataSource];
   if (!data) {
     console.error(`数据源 "${currentDataSource}" 不存在！`);
     return;
@@ -220,40 +150,61 @@ function updateButtons() {
   createButtons("AndroidData", data.AndroidData, currentDataSource);
 }
 
-// 创建切换数据源按钮
-function createSwitchButtons() {
-  const buttonContainer = document.createElement("div");
-  buttonContainer.style.marginBottom = "20px";
-
-  const sources = ["upup", "banana", "flyint", "ssp", "miao"];
-  sources.forEach((source) => {
-    const btn = document.createElement("button");
-    btn.textContent = `${source}`;
-    switch (btn.textContent) {
-      case "upup":
-        btn.style.background = "red";
-        btn.style.visibility = "hidden";
-        previousButton = btn;
-        setName("upup");
-        break;
-      case "banana":
-        btn.style.background = "gold";
-        break;
-      case "flyint":
-        btn.style.background = "slateblue";
-        break;
-      case "ssp":
-        btn.style.background = "royalblue";
-        break;
-      case "miao":
-        btn.style.background = "slategray";
-        break;
-    }
-    btn.onclick = () => setDataSource(source, btn);
-    buttonContainer.appendChild(btn);
+// 预加载图片并更新进度条
+function preloadImage(url, loadingText) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.src = url;
+    img.onload = () => {
+      setTimeout(() => loadingText.remove(), 500);
+      resolve(img);
+    };
+    img.onerror = (err) => {
+      loadingText.textContent = "图片加载失败";
+      reject(err);
+    };
   });
+}
 
-  document.body.insertBefore(buttonContainer, document.body.firstChild);
+// 创建按钮
+function createButtons(containerId, data) {
+  const container = containers[containerId];
+  if (!container) return;
+
+  container.innerHTML = ""; // 清空容器
+  const keys = Object.keys(data);
+  const btnList = [];
+
+  for (let i = keys.length - 1; i >= 0; i--) {
+    const key = keys[i];
+    const btn = document.createElement("button");
+    btn.textContent = key;
+
+    if (containerId !== "DailyData" && containerId !== "AppData") {
+      btn.style.borderLeft = "2px solid black";
+    } else if (containerId === "DailyData" && i < keys.length - checkLength) {
+      btn.style.borderLeft = "2px solid black";
+    }
+
+    if (key.includes("图")) {
+      if (!data[key]) continue;
+
+      const loadingText = document.createElement("span");
+      loadingText.textContent = "加载图片中...";
+      loadingText.style.cssText = "display: block; font-size: 12px; text-align: center; margin-top: 5px; color: red";
+      
+      btn.appendChild(loadingText);
+      preloadImage(data[key], loadingText);
+      btn.onclick = () => copyImage(data[key], btn);
+    } else {
+      btn.onclick = () => copyToClipboard(data[key], btn);
+    }
+
+    btnList.unshift(btn);
+  }
+
+  btnList.forEach((btn) => container.appendChild(btn));
 }
 
 // 复制文本
@@ -277,11 +228,6 @@ function copyToClipboard(text, button) {
       if (button) button.disabled = false;
       document.body.style.pointerEvents = "auto";
     });
-}
-
-// 跳转开发票文本
-function fapiao() {
-  window.open("http://fp.imwayson.com/", "_blank");
 }
 
 // 复制图片
@@ -320,6 +266,11 @@ async function copyImage(value, button) {
     if (button) button.disabled = false;
     document.body.style.pointerEvents = "auto";
   }
+}
+
+// 跳转开发票文本
+function fapiao() {
+  window.open("http://fp.imwayson.com/", "_blank");
 }
 
 // 初始化
