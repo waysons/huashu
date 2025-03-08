@@ -13,9 +13,9 @@ banana2 = `https://web.yakoo.one/`;
 banana3 = `https://go.bananapro.club/`;
 
 flyint1 = `https://to.FlyintPro.com`;
-flyint2 = `https://www.flyintpro04.com/`;
-flyint3 = `https://www.flyintpro05.com`;
+flyint2 = `https://www.flyintpro04.com/`; // 默认可以导入的
 flyint3 = `https://www.flyintpro06.com`;
+flyint4 = ``
 flyint31 = `https://node.flyintpro06.com`;
 
 shaoshupai1 = `https://sspai.ink`;
