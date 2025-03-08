@@ -15,7 +15,7 @@ banana3 = `https://go.bananapro.club/`;
 flyint1 = `https://to.FlyintPro.com`;
 flyint2 = `https://www.flyintpro04.com/`; // 默认可以导入的
 flyint3 = `https://flyintpro06.com`;
-flyint4 = `https://flyintpro06.pro`
+flyint4 = `https://flyintpro06.pro`;
 flyint31 = `https://node.flyintpro06.com`;
 
 shaoshupai1 = `https://sspai.ink`;
@@ -289,6 +289,7 @@ const cloudupupWinData = {
   Win设置DNS图: `./img/win_dns.png`,
   右下角清除重启: `在电脑右下角的状态栏找到cloudupup小图标 => 点击cloudupup小图标 => 选择 重启并清除配置 => 试试看`,
   关闭代理: `进入电脑的设置 => 网络与Internet => 代理 => 关闭代理服务器`,
+  电脑信任软件图: `./img/win_save.png`,
 };
 const cloudupupMacData = {
   upup使用教程图: `/img/cloudupup.png`,
@@ -401,7 +402,8 @@ https://banana-fast01.com
 const bananaDailyData = { ...bananaSelfData, ...generalData };
 const bananaAppData = cloudupupAppData;
 const bananaIOSData = {};
-const bananaWinData = {};
+const bananaWinData = {
+  电脑信任软件图: `./img/win_save.png`,};
 const bananaMacData = {};
 const bananaAndroidData = {};
 
@@ -463,7 +465,8 @@ ${flyint1}
 3. 不支持新疆或海外地区使用，如果您是以上地区请提供支付截图给我。这边给您转到可用平台
 4. 退出杀毒软件，打开clash>>tun模式，然后打开控制面板》》网络与共享中心》》clash，点击一下》》属性》》ipv4》》全选自动
 5. 请确保用的是最新订阅地址， ${flyint2} 这里重新导入的`,
-Win设置DNS: `DNS设置教程链接 https://zhuanlan.zhihu.com/p/305914414`
+  Win设置DNS: `DNS设置教程链接 https://zhuanlan.zhihu.com/p/305914414`,
+  电脑信任软件图: `./img/win_save.png`,
 };
 const flyintMacData = {};
 const flyintAndroidData = {
@@ -482,7 +485,8 @@ const shaoshupaiSelfData = {
 const shaoshupaiDailyData = { ...flyintSelfData, ...generalData };
 const shaoshupaiAppData = cloudupupAppData;
 const shaoshupaiIOSData = {};
-const shaoshupaiWinData = {};
+const shaoshupaiWinData = {
+  电脑信任软件图: `./img/win_save.png`,};
 const shaoshupaiMacData = {};
 const shaoshupaiAndroidData = {};
 
@@ -506,7 +510,8 @@ ${miaomiao1}ios
 也可以用共享ID下载海外软件
 下载完成后要及时退出噢`,
 };
-const miaomiaoWinData = {};
+const miaomiaoWinData = {
+  电脑信任软件图: `./img/win_save.png`,};
 const miaomiaoMacData = {
   Mac扩展: `mac扩展:
 1. 下载软件安装后 点击安装扩展 然后进入电脑的设置 => 通用 => 登陆与扩展 => 网络扩展 => 找到miaomiao => 打开
