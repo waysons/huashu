@@ -271,11 +271,6 @@ function fapiao() {
   window.open("http://fp.imwayson.com/", "_blank");
 }
 
-// 检查域名
-function checkURL(){
-  console.log(AllLink)
-}
-
 // 初始化
 createSwitchButtons();
 updateButtons();
