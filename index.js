@@ -221,9 +221,8 @@ async function copyImage(value, button) {
   document.body.style.pointerEvents = "none";
   try {
     window.focus();
-    const permissionStatus = await navigator.permissions.query({
-      name: "clipboard-write",
-    });
+    await new Promise(r => setTimeout(r, 500));
+    const permissionStatus = await navigator.permissions.query({ name: "clipboard-write" });
     if (permissionStatus.state === "denied") {
       throw new Error("无剪贴板写入权限");
     }
