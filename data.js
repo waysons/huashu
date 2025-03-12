@@ -1,7 +1,7 @@
 //   -------------------- 域名 --------------------
 
 cloudupup1 = `https://cloudupup.net`;
-cloudupup2 = `https://up01.cloudupup16.com`;
+cloudupup2 = `https://up02.cloudupup17.com`;
 cloudupup3 = `https://cloudupup.cc`;
 cloudupup4 = `https://help.cloudupup.net`;
 cloudupup5 = `https://106.52.178.206:9000/auth/login`;
