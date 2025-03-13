@@ -150,7 +150,7 @@ function updateButtons() {
         btn.style.cssText =
           "background: white; box-shadow: none; pointer-events: none; display: block;";
       if (key.includes("图")) {
-        btn.style.borderRight = "3px solid black";
+        btn.style.borderRight = "5px solid black";
         if (!data[key]) continue;
         preloadImage(data[key], btn, key);
         btn.onclick = () => copyImage(data[key], btn);
@@ -187,7 +187,7 @@ function updateButtons() {
 
 // 复制文本
 async function copyToClipboard(text, button) {
-  button.style.backgroundColor = "lime";
+  button.style.backgroundColor = "green";
   if (button) button.disabled = true;
   document.body.style.pointerEvents = "none";
   navigator.clipboard
@@ -224,12 +224,12 @@ async function copyImage(value, button) {
     await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
     if (button) {
       button.disabled = true;
-      button.style.backgroundColor = "lime";
+      button.style.backgroundColor = "green";
       setTimeout(() => (button.style.backgroundColor = ""), 500);
     }
   } catch (err) {
     console.error("复制失败:", err);
-    alert("复制失败! 请重试\n\n请不要过快的切换窗口, 复制网页中的图片需要时间缓存进剪切板");
+    // alert("复制失败! 请重试\n\n请不要过快的切换窗口, 复制网页中的图片需要时间缓存进剪切板");
   } finally {
     if (button) button.disabled = false;
   }
