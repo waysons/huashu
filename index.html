@@ -34,7 +34,7 @@
       h5 {
         margin-left: 50px;
         color: red;
-        font-size: 16px;
+        font-size: 18px;
         margin-top: 20px;
         margin-bottom: 0;
       }
@@ -46,28 +46,38 @@
       span:hover {
         cursor: pointer;
       }
+      .bottom {
+        border-bottom: 1px solid red;
+        margin-right: 100px;
+      }
     </style>
     <script defer src="data.js"></script>
     <script defer src="index.js"></script>
   </head>
   <body>
     <h2 id="nameContainer"></h2>
-    <h5 style="margin-left: 0; padding-left: 50px; color: purple;">
-      <span onclick="fapiao()">&nbsp;&nbsp;&nbsp;点我开发票&nbsp;&nbsp;&nbsp;</span>
+    <h3 id="tempContainer" style="margin-left: 0; padding-left: 50px; color: purple">
+      <span onclick="fapiao()"
+        >&nbsp;&nbsp;&nbsp;点我开发票&nbsp;&nbsp;&nbsp;</span
+      >
+      <span onclick="wechatBackground()"
+        >&nbsp;&nbsp;&nbsp;复制新的微信背景图到剪切板&nbsp;&nbsp;&nbsp;</span
+      >
     </h5>
 
-    <h5>日常快捷回复</h5>
+    <h5 class="bottom">日常快捷回复</h5>
     <div id="DailyData"></div>
-    <h5>通用问题 & 其他软件问题</h5>
+    <h5 class="bottom">通用问题 & 其他软件问题</h5>
     <div id="AppData"></div>
-    <h5>iOS/iPad</h5>
+    <h5 class="bottom">iOS/iPad</h5>
     <div id="IOSData"></div>
-    <h5>Windows电脑</h5>
+    <h5 class="bottom">Windows电脑</h5>
     <div id="WinData"></div>
-    <h5>Mac电脑</h5>
+    <h5 class="bottom">Mac电脑</h5>
     <div id="MacData"></div>
-    <h5>Android手机</h5>
+    <h5 class="bottom">Android手机</h5>
     <div id="AndroidData"></div>
+    <h5 class="bottom"></h5>
     <h5 style="margin-bottom: 100px"></h5>
   </body>
 </html>

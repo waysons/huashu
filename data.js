@@ -1,31 +1,42 @@
+
 //   -------------------- 域名 --------------------
 
-cloudupup1 = `https://cloudupup.net`;
-cloudupup2 = `https://up02.cloudupup17.com`;
-cloudupup3 = `https://cloudupup.cc`;
-cloudupup4 = `https://help.cloudupup.net`;
-cloudupup5 = `https://106.52.178.206:9000/auth/login`;
+const cloudupup1 = `https://cloudupup.net`;
+const cloudupup2 = `https://up02.cloudupup17.com`;
+const cloudupup3 = `https://cloudupup.cc`;
+const cloudupup4 = `https://help.cloudupup.net`;
+const cloudupup5 = `https://106.52.178.206:9000/auth/login`;
 
-idinshop = `https://idinshop.com/`;
+const idinshop = `https://idinshop.com/`;
 
-banana1 = `https://banana-fast01.com/`;
-banana2 = `https://web.yakoo.one/`;
-banana3 = `https://go.bananapro.club/`;
+const banana1 = `https://banana-fast01.com/`;
+const banana2 = `https://web.yakoo.one/`;
+const banana3 = `https://go.bananapro.club/`;
 
-flyint1 = `https://to.FlyintPro.com`;
-flyint2 = `https://www.flyintpro04.com/`;
-flyint3 = `https://flyintpro06.com`;
-flyint4 = `https://flyintpro06.pro`;
-flyint31 = `https://node.flyintpro06.com`;
-flytint5 = `https://flyintpro08.com/`;
-flytint6 = `https://flyintpro08.pro/`;
+const flyint1 = `https://to.FlyintPro.com`;
+const flyint2 = `https://www.flyintpro04.com/`;
+const flyint3 = `https://flyintpro06.com`;
+const flyint4 = `https://flyintpro06.pro`;
+const flyint31 = `https://node.flyintpro06.com`;
+const flytint5 = `https://flyintpro08.com/`;
+const flytint6 = `https://flyintpro08.pro/`;
 
-shaoshupai1 = `https://sspai.ink`;
+const shaoshupai1 = `https://sspai.ink`;
 
-miaomiao1 = `https://mm.yakoo.one/`;
-miaomiao2 = `https://kda03.abcabclink.net/auth/login`;
+const miaomiao1 = `https://mm.yakoo.one/`;
+const miaomiao2 = `https://kda03.abcabclink.net/auth/login`;
 
-AllLink = [cloudupup1,cloudupup2,cloudupup3,cloudupup4,cloudupup5,banana1,flyint2,flyint3,flyint4,flytint5,flytint6,shaoshupai1,miaomiao1,miaomiao2]
+const AllLink = [cloudupup1,cloudupup2,cloudupup3,cloudupup4,cloudupup5,banana1,flyint2,flyint3,flyint4,flytint5,flytint6,shaoshupai1,miaomiao1,miaomiao2]
+
+//   -------------------- 微信背景图 --------------------
+
+const title = `复制去浏览器并登陆进入官网`
+const title1 = `永久域名:`
+const title2 = `官网地址:`
+const title3 = `备用地址:`
+const note1 = `!!!一定要复制在浏览器打开噢!!!`
+const note2 = `请多多关注我们朋友圈、了解新域名`
+const note3 = `有任何问题随时官网联系客服进行咨询噢~`
 
 //   -------------------- 通用 --------------------
 
@@ -34,7 +45,6 @@ const generalData = {
   GPT等账号销售: `这边有谷歌账号 / GPT3.5和4.0 / Apple ID\n${idinshop}\n复制去浏览器打开噢`,
   toDesk远程: `可以帮您远程仔细排查下\n下载toDesk, 然后把首页 设备代码 发我\nhttps://www.todesk.com/download.html\n❗windows电脑不用设置\n❗mac电脑需要要把三个权限都打开, todesk首页有红色提示引导`,
   开发票说明: `因为这边是海外公司, 所以无法开大陆发票, 但这边可以给您开invoice, 如果您需要的话, 写下您的 (公司全称) 和 (收款邮箱) 以及 (支付截图), 这边记录一下, 24小时内给您开, 请您耐心等待~`,
-  致谢用户: `感谢您的支持和关注~~我们会继续加油的\n遇到问题随时咨询我们~~我们会提供更好品质的服务！！!`,
   邮箱不存在: `为了用户的账户安全, 我们会在套餐过期一个月后会自动注销, 可以保障用户的个人信息安全, 您可以用原有的账号重新注册并购买即可~`,
   Win电脑开机没网: `这种情况大部分原因是因为关机的时候没正常退出软件 您可以手动设置下
 1️⃣ 进入电脑设置 => 网络与Internet => 代理 => 将代理服务器关闭 (就恢复国内网络了)`,
@@ -59,11 +69,11 @@ const generalData = {
 //   -------------------- Cloudupup --------------------
 
 const cloudupupDailyData = {
-  最新官网域名: `请登陆以下官网:\n永久域名: ${cloudupup1}\n官网网址: ${cloudupup2}\n备用网址: ${cloudupup3}\n问题指南: ${cloudupup4}\n🚫不要直接点击打开链接🚫\n✅ 请手动复制去浏览器 ✅\n\n官网可以及时联系到我们客服的噢~`,
+  最新官网域名: `请登陆以下官网:\n永久域名: ${cloudupup1}\n官网网址: ${cloudupup2}\n备用网址: ${cloudupup3}\n问题指南: ${cloudupup4}\n🚫不要直接点击打开链接🚫\n✅ 请手动复制去浏览器 ✅\n✅ 请手动复制去浏览器 ✅\n✅ 请手动复制去浏览器 ✅\n\n官网可以及时联系到我们客服的噢~`,
   福建或其他用户: `试试这个看 ${cloudupup5}`,
   微信不添加好友: `复制去浏览器打开噢 ${cloudupup3} 登陆官网后右下角可以联系客服`,
   其他线路测速: `点击其他线路 点击小闪电 多点几个 有延迟数值吗?`,
-  邀请返利: `请登陆以下官网:\n永久域名: ${cloudupup1}\n官网网址: ${cloudupup2}\n备用网址: ${cloudupup3}\n问题指南: ${cloudupup4}\n🚫不要直接点击打开链接🚫\n✅ 请手动复制去浏览器 ✅\n\n您可以登陆官网 => 我的账号 => 邀请返利\n把邀请返利有个"链接地址", 发给朋友去注册\n\n如果对方无法打开 请使用新域名去打开\n确保链接用的是最新的域名\n例如: https://旧的官网/auth/register?code=ABCD\n改成: https://新的域名/auth/register?code=ABCD\n\n每次朋友购买都会有20%返利到您的账户,\n满300可以提现也可以发工单,\n或者转成余额,抵扣套餐费用哦~`,
+  邀请返利: `请登陆以下官网:\n永久域名: ${cloudupup1}\n官网网址: ${cloudupup2}\n备用网址: ${cloudupup3}\n问题指南: ${cloudupup4}\n🚫不要直接点击打开链接🚫\n✅ 请手动复制去浏览器 ✅\n✅ 请手动复制去浏览器 ✅\n✅ 请手动复制去浏览器 ✅\n\n您可以登陆官网 => 我的账号 => 邀请返利\n把邀请返利有个"链接地址", 发给朋友去注册\n\n如果对方无法打开 请使用新域名去打开\n确保链接用的是最新的域名\n例如: https://旧的官网/auth/register?code=ABCD\n改成: https://新的域名/auth/register?code=ABCD\n\n每次朋友购买都会有20%返利到您的账户,\n满300可以提现也可以发工单,\n或者转成余额,抵扣套餐费用哦~`,
   无优惠活动: `实在抱歉, 最近没什么活动\n一般情况下节假日才有活动噢\n        \n目前年卡:190元 (月卡22元x12=264元)\n年卡是月卡的7折，可以冲\n\n我们有专线独享套餐,比其他产品的公网服务成本要高7-8倍\n稳定性也是最好的，可以放心使用\n且有任何疑惑都可以向我们咨询\n同类产品价格基本都是翻倍，主打品质，感谢您的支持~\n大流量和超大流量套餐 折扣更是划算~`,
   推荐关注: `我们有官方推特和Facebook账号了，上面会不定时更新如何注册及使用外网app的教程。 \n如果有需要的教程，可对我们提出 会给大家安排。\n推特账号: cloudupup梯子 （https://x.com/cloudupup梯子）\nFacebook账号: cloudupup梯子 \nhttps://www.facebook.com/profile.php?id=61559661946393`,
   专线咨询: `专享线路为定制线路，定制线路688元起每月，一人专享一条企业级高速线路。\n如果您想要定制的话需要先跟客服说您的线路需求后 我们会为您量身定制，\n线路会在付款后的2-3天后为您开通。`,
@@ -73,7 +83,7 @@ const cloudupupDailyData = {
 const cloudupupAppData = generalData;
 const cloudupupIOSData = {
   iOS安装教程: `美区ID切换教程及安装小火箭教程:
-  1️⃣ 请登陆以下官网:\n永久域名: ${cloudupup1}\n官网网址: ${cloudupup2}\n备用网址: ${cloudupup3}\n问题指南: ${cloudupup4}\n🚫不要直接点击打开链接🚫\n✅ 请手动复制去浏览器 ✅\n2️⃣ 然后在主页 => 找到"iOS/iPad安装(美区共享ID)" 点击打开\n    往下拉可以看到我们官网提供的 美区共享ID\n3️⃣ 在app store登陆美区ID后\n4️⃣ 会弹出安全验证, 选 其他选项 => 不升级\n(请不要在手机设置或其他地方登陆)\n❗❗❗这里很重要❗❗❗\n✅成功登陆后后✅\n5️⃣ 搜索shadowrocket（或您想要的其他软件）下载\n6️⃣ 下载完成后退出共享id （因为20分钟后会自动修改密码）\nps. 步骤看起来多是因为非常的详细\n有任何问题随时联系客服`,
+  1️⃣ 请登陆以下官网:\n永久域名: ${cloudupup1}\n官网网址: ${cloudupup2}\n备用网址: ${cloudupup3}\n问题指南: ${cloudupup4}\n🚫不要直接点击打开链接🚫\n✅ 请手动复制去浏览器 ✅\n✅ 请手动复制去浏览器 ✅\n✅ 请手动复制去浏览器 ✅\n2️⃣ 然后在主页 => 找到"iOS/iPad安装(美区共享ID)" 点击打开\n    往下拉可以看到我们官网提供的 美区共享ID\n3️⃣ 在app store登陆美区ID后\n4️⃣ 会弹出安全验证, 选 其他选项 => 不升级\n(请不要在手机设置或其他地方登陆)\n❗❗❗这里很重要❗❗❗\n✅成功登陆后后✅\n5️⃣ 搜索shadowrocket（或您想要的其他软件）下载\n6️⃣ 下载完成后退出共享id （因为20分钟后会自动修改密码）\nps. 步骤看起来多是因为非常的详细\n有任何问题随时联系客服`,
   iOS安装教程图: `./img/ios_shadowrocket.png`,
   iOS更新教程: `1️⃣ 关闭连接。\n2️⃣ 将全局路由改为 代理 模式\n3️⃣ 删除全部节点线路\n4️⃣ 使用苹果自带浏览器(safari)登录以下官网:\n  永久域名: ${cloudupup1}\n  官网网址: ${cloudupup2}\n  备用网址: ${cloudupup3}\n  问题指南: ${cloudupup4}\n  🚫不要直接点击打开链接🚫\n  ✅ 请手动复制去浏览器 ✅\n5️⃣ 在官网找到"订阅更新", 直接点击后导入\n  (或者 在官网拉到底部找到 Shadowrocket订阅 => 一键导入)\n  🚫微信直接打开的官网无法导入, 请使用safari\n\n注: 在选择国家的节点后 , 再打开连接即可使用`,
   iOS更新教程图: `./img/ios_update.png`,
@@ -84,11 +94,11 @@ const cloudupupIOSData = {
   iOS更新软件问题: `目前苹果新规则不允许不同的ID去更新软件了\n您卸载重新下载软件即可继续试用\n(有担心更新后没有聊天记录的问题, 可以提前备份)`,
 };
 const cloudupupWinData = {
-  V2ray更新upup: `推荐使用新的客户端:cloudupup\n前往官网下载安装即可立刻使用:\n永久域名: ${cloudupup1}\n官网网址: ${cloudupup2}\n备用网址: ${cloudupup3}\n问题指南: ${cloudupup4}\n🚫不要直接点击打开链接🚫\n✅ 请手动复制去浏览器 ✅\n1️⃣ 进入官网后 往下拉 找到Windows\n2️⃣ 点击 下载地址1 (地址2也可以)\n3️⃣ 下载后安装时选择 所有用户可用!\n4️⃣ 建议安装到默认地址c盘，不要改!`,
+  V2ray更新upup: `推荐使用新的客户端:cloudupup\n前往官网下载安装即可立刻使用:\n永久域名: ${cloudupup1}\n官网网址: ${cloudupup2}\n备用网址: ${cloudupup3}\n问题指南: ${cloudupup4}\n🚫不要直接点击打开链接🚫\n✅ 请手动复制去浏览器 ✅\n✅ 请手动复制去浏览器 ✅\n✅ 请手动复制去浏览器 ✅\n1️⃣ 进入官网后 往下拉 找到Windows\n2️⃣ 点击 下载地址1 (地址2也可以)\n3️⃣ 下载后安装时选择 所有用户可用!\n4️⃣ 建议安装到默认地址c盘，不要改!`,
   upup使用教程图: `./img/cloudupup.png`,
   upup连接无反应: `尝试一下以下办法:\n1️⃣关闭并卸载所有安全软件和杀毒软件\n2️⃣尝试进入设置 => 关闭防火墙\n3️⃣尝试重装软件后 => 重启电脑\n    (*把软件安装在C盘后)\n4️⃣在电脑的状态栏 => 右键cloudupup小图标\n    并选"重启并清除配置"\n如果还是不行, 这边可以给您远程看一下\n下载toDesk, 发我 设备代码, 这边帮您排查下\nhttps://www.todesk.com/download.html\n(*windows电脑不用设置)\n(*mac电脑需要要把三个权限都打开, todesk首页有红色提示的`,
   Clash更新教程: `Clash教程:
-1️⃣进入以下官网：\n永久域名: ${cloudupup1}\n官网网址: ${cloudupup2}\n备用网址: ${cloudupup3}\n问题指南: ${cloudupup4}\n🚫不要直接点击打开链接🚫\n✅ 请手动复制去浏览器 ✅\n\n2️⃣登陆个人账号后 -> 官网首页 -> 点击 Clash订阅 -> 使用一键导入即可\n  *也可以使用复制订阅手动导入`,
+1️⃣进入以下官网：\n永久域名: ${cloudupup1}\n官网网址: ${cloudupup2}\n备用网址: ${cloudupup3}\n问题指南: ${cloudupup4}\n🚫不要直接点击打开链接🚫\n✅ 请手动复制去浏览器 ✅\n✅ 请手动复制去浏览器 ✅\n✅ 请手动复制去浏览器 ✅\n\n2️⃣登陆个人账号后 -> 官网首页 -> 点击 Clash订阅 -> 使用一键导入即可\n  *也可以使用复制订阅手动导入`,
   Clash更新教程图: `./img/win_clash.png`,
   Win设置电脑代理: `1️⃣ 进入电脑设置 => 网络与Internet => 代理 => 将代理服务器\n-- 代理ip 设置为: 127️.0.0.1\n-- 端口   设置为: 17890 \n2️⃣ 保存成功后 尝试下网络是否恢复正常\n  *重新进入第一步, 看看是否保存成功`,
   Win设置DNS: `Windows的DNS设置教程链接 https://zhuanlan.zhihu.com/p/305914414`,
@@ -108,7 +118,7 @@ const cloudupupMacData = {
   Mac更改dns图: `./img/mac_dns.png`,
 };
 const cloudupupAndroidData = {
-  Android安装下载: `推荐使用新的客户端:cloudupup\n永久域名: ${cloudupup1}\n官网网址: ${cloudupup2}\n备用网址: ${cloudupup3}\n问题指南: ${cloudupup4}\n🚫不要直接点击打开链接🚫\n✅ 请手动复制去浏览器 ✅\n1️⃣ 登陆官网后, 找到安卓下载\n2️⃣ 点击下载地址1 (下载地址2也可以)\n3️⃣ 安装即可马上使用`,
+  Android安装下载: `推荐使用新的客户端:cloudupup\n永久域名: ${cloudupup1}\n官网网址: ${cloudupup2}\n备用网址: ${cloudupup3}\n问题指南: ${cloudupup4}\n🚫不要直接点击打开链接🚫\n✅ 请手动复制去浏览器 ✅\n✅ 请手动复制去浏览器 ✅\n✅ 请手动复制去浏览器 ✅\n1️⃣ 登陆官网后, 找到安卓下载\n2️⃣ 点击下载地址1 (下载地址2也可以)\n3️⃣ 安装即可马上使用`,
   Android使用教程图: `./img/android_cloudupup.png`,
   安卓无法使用: `安卓无法使用：\n1️⃣多个软件冲突，造成权限被其他软件无法使用\n解决：删除所有代理软件后，重启手机重装\n2️⃣切换4g或者wifi试试，可能是路由器或者本地宽带有一些限制，或者第三方代理\n3️⃣设备时间设置北京时间自动同步即可\n4️⃣卸载反炸app等安全软件\n5️⃣套餐过期\n如果还解决不了，请提供更多的信息或截图以及视频，客服会尽快帮您解决！`,
   Android海外软件: `可以访问链接进行下载海外应用\n打开代理软件才能访问\nhttps://apkpure.com\n(以上网址请复制去浏览器打开~)`,

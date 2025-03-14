@@ -135,55 +135,57 @@ function updateButtons() {
 }
 
 // 创建按钮
-  function createButtons(containerId, data) {
-    const container = containers[containerId];
-    if (!container) return;
-    // 清空容器
-    container.innerHTML = "";
-    const keys = Object.keys(data);
-    const btnList = [];
-    for (let i = keys.length - 1; i >= 0; i--) {
-      const key = keys[i];
-      const btn = document.createElement("button");
-      btn.textContent = key;
-      if (key.includes("____"))
-        btn.style.cssText =
-          "background: white; box-shadow: none; pointer-events: none; display: block;";
-      if (key.includes("图")) {
-        btn.style.borderRight = "5px solid black";
-        if (!data[key]) continue;
-        preloadImage(data[key], btn, key);
-        btn.onclick = () => copyImage(data[key], btn);
-      } else {
-        btn.onclick = () => copyToClipboard(data[key], btn);
-      }
-      btnList.unshift(btn);
+function createButtons(containerId, data) {
+  const container = containers[containerId];
+  if (!container) return;
+  // 清空容器
+  container.innerHTML = "";
+  const keys = Object.keys(data);
+  const btnList = [];
+  for (let i = keys.length - 1; i >= 0; i--) {
+    const key = keys[i];
+    const btn = document.createElement("button");
+    btn.textContent = key;
+    if (key.includes("____")) {
+      btn.textContent = "";
+      btn.style.cssText =
+        "height: 0; margin:0; background: white; box-shadow: none; pointer-events: none; display: block;";
     }
-    btnList.forEach((btn) => container.appendChild(btn));
+    if (key.includes("图")) {
+      btn.style.borderRight = "5px solid black";
+      if (!data[key]) continue;
+      preloadImage(data[key], btn, key);
+      btn.onclick = () => copyImage(data[key], btn);
+    } else {
+      btn.onclick = () => copyToClipboard(data[key], btn);
+    }
+    btnList.unshift(btn);
   }
+  btnList.forEach((btn) => container.appendChild(btn));
+}
 
-  // 预加载图片并更新进度条
-  function preloadImage(url, btn, name) {
-    return new Promise((resolve, reject) => {
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.src = url;
-      btn.textContent = "加载图片中...";
-      btn.style.color = "orange";
-      img.onload = () => {
-        setTimeout(() => {
-          btn.textContent = name;
-          btn.style.color = "black";
-        }, 500);
-        resolve(img);
-      };
-      img.onerror = (err) => {
-        btn.textContent = "图片加载失败";
-        btn.style.cssText = "color: red";
-        reject(err);
-      };
-    });
-  }
+// 预加载图片并更新进度条
+function preloadImage(url, btn, name) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.src = url;
+    btn.textContent = "加载图片中...";
+    btn.style.color = "orange";
+    img.onload = () => {
+      setTimeout(() => {
+        btn.textContent = name;
+        btn.style.color = "black";
+      }, 500);
+      resolve(img);
+    };
+    img.onerror = (err) => {
+      btn.textContent = "图片加载失败";
+      btn.style.cssText = "color: red";
+      reject(err);
+    };
+  });
+}
 
 // 复制文本
 async function copyToClipboard(text, button) {
@@ -215,7 +217,9 @@ async function copyImage(value, button) {
     return;
   }
   try {
-    const permissionStatus = await navigator.permissions.query({ name: "clipboard-write" });
+    const permissionStatus = await navigator.permissions.query({
+      name: "clipboard-write",
+    });
     if (permissionStatus.state === "denied") {
       throw new Error("无剪贴板写入权限");
     }
@@ -267,6 +271,53 @@ async function createImageBlob(img) {
 // 跳转开发票文本
 function fapiao() {
   window.open("http://fp.imwayson.com/", "_blank");
+}
+
+// 更换新的微信背景图
+async function wechatBackground() {
+  const tc = document.getElementById("tempContainer");
+  const wechatSpan = tc.getElementsByTagName("span")[1];
+
+  let wechatText = wechatSpan.textContent;
+  wechatSpan.textContent = "复制中...";
+
+  const canvas = document.createElement("canvas");
+  canvas.width = 400;
+  canvas.height = 850;
+  const ctx = canvas.getContext("2d");
+
+  // 填充背景色
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // 铺上文本
+  ctx.fillStyle = "black";
+  ctx.font = "bolder 18px SimHei";
+  ctx.fillText(title, 5, 330);
+  ctx.fillText(title1, 25, 370);
+  ctx.fillText(title2, 25, 400);
+  ctx.fillText(title3, 25, 430);
+  ctx.fillStyle = "blue";
+  ctx.fillText(cloudupup1, 110, 370);
+  ctx.fillText(cloudupup2, 110, 400);
+  ctx.fillText(cloudupup3, 110, 430);
+  ctx.fillStyle = "red";
+  ctx.fillText(note1, 100, 480);
+  ctx.fillStyle = "black";
+  ctx.fillText(note2, 5, 510);
+  ctx.fillText(note3, 5, 540);
+
+  try {
+    const blob = await new Promise((resolve) =>
+      canvas.toBlob(resolve, "image/png")
+    );
+    await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+    wechatSpan.textContent = "复制成功了、到微信粘贴图片即可";
+    setTimeout(() => (wechatSpan.textContent = wechatText), 1000);
+  } catch (error) {
+    console.error("复制图片失败:", error);
+    alert("复制失败，可能是浏览器不支持！");
+  }
 }
 
 // 初始化
