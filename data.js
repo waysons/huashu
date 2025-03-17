@@ -2,7 +2,7 @@
 //   -------------------- 域名 --------------------
 
 const cloudupup1 = `https://cloudupup.net`;
-const cloudupup2 = `https://up02.cloudupup17.com`;
+const cloudupup2 = `https://up03.cloudupup17.com`;
 const cloudupup3 = `https://cloudupup.cc`;
 const cloudupup4 = `https://help.cloudupup.net`;
 const cloudupup5 = `https://106.52.178.206:9000/auth/login`;
@@ -222,6 +222,8 @@ const flyintDailyData = {
   订阅问题: `把订阅连接的域名 >> ${flyint31} 替换成 \n${flyint2}\n或者\n${flyint3} `,
   //   --------------------
   复制订阅重新导入: `您试试改下您的订阅地址去重新导入下\n复制订阅地址出来  然后把 旧域名 换成 新域名\n新域名为: ${flytint5}\n(后面的不变 只需要改动域名)\n例如: https://旧的域名/api/v1/client/subscribe?token=1234567890\n改成: https://新的域名/api/v1/client/subscribe?token=1234567890\n\n或者 \n\n订阅地址发我看看, 这边帮您排查下噢`,
+  //   --------------------
+  重置订阅地址: `进入官网 => 左侧栏 个人中心 => 往下拉 点击重置订阅`,
   //   --------------------
   无优惠活动: `实在抱歉, 最近没什么活动\n一般情况下节假日才有活动噢 可以随时关注官网公告即可`,
   //   --------------------
