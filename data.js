@@ -2,7 +2,7 @@
 //   -------------------- 域名 --------------------
 
 const cloudupup1 = `https://cloudupup.net`;
-const cloudupup2 = `https://up03.cloudupup17.com`;
+const cloudupup2 = `https://up01.cloudupup15.com`;
 const cloudupup3 = `https://cloudupup.cc`;
 const cloudupup4 = `https://help.cloudupup.net`;
 const cloudupup5 = `https://106.52.178.206:9000/auth/login`;
@@ -211,7 +211,22 @@ const bananaWinData = {
   电脑信任软件图: `./img/win_save.png`,
   //   --------------------
 };
-const bananaMacData = {};
+const bananaMacData = {
+  
+  旧版本Mac电脑:`mac老版本下载:
+  https://github.com/W-MS/V2RayX-macOS/releases/download/1.5.1/V2RayX_1.5.1_CHN.zip
+  上面是v2rayX中文版下载地址
+  https://www.bwgss.org/1040.html
+  这个是v2rayX的教程 可以看看 (edited)
+  
+  -------------------
+  
+  https://github.com/yanue/V2rayU/releases/download/v4.2.5/V2rayU-64.dmg (edited)
+  这个是v2rayU最新版
+  https://v2rayu.org/
+  v2rayU的教程`
+  //   --------------------
+};
 const bananaAndroidData = {};
 
 //   -------------------- 飞数 --------------------
@@ -251,7 +266,21 @@ const flyintWinData = {
   电脑信任软件图: `./img/win_save.png`,
   //   --------------------
 };
-const flyintMacData = {};
+const flyintMacData = {
+  旧版本Mac电脑:`mac老版本下载:
+  https://github.com/W-MS/V2RayX-macOS/releases/download/1.5.1/V2RayX_1.5.1_CHN.zip
+  上面是v2rayX中文版下载地址
+  https://www.bwgss.org/1040.html
+  这个是v2rayX的教程 可以看看 (edited)
+  
+  -------------------
+  
+  https://github.com/yanue/V2rayU/releases/download/v4.2.5/V2rayU-64.dmg (edited)
+  这个是v2rayU最新版
+  https://v2rayu.org/
+  v2rayU的教程`
+  //   --------------------
+};
 const flyintAndroidData = {
   安卓clash: `1. 登录官网，主页下方有使用教程，点击进去即可看到对应的客户端。\n${flyint1}\n2. 安装完成后，点击官网主页下方的一键订阅，选择导入到clash的选项即可\n\n电脑的请解压到：C盘>>program file>>clash， 然后右键以管理员身份运行`,
   //   --------------------
@@ -269,7 +298,22 @@ const shaoshupaiWinData = {
   电脑信任软件图: `./img/win_save.png`,
   //   --------------------
 };
-const shaoshupaiMacData = {};
+const shaoshupaiMacData = {
+  
+  旧版本Mac电脑:`mac老版本下载:
+  https://github.com/W-MS/V2RayX-macOS/releases/download/1.5.1/V2RayX_1.5.1_CHN.zip
+  上面是v2rayX中文版下载地址
+  https://www.bwgss.org/1040.html
+  这个是v2rayX的教程 可以看看 (edited)
+  
+  -------------------
+  
+  https://github.com/yanue/V2rayU/releases/download/v4.2.5/V2rayU-64.dmg (edited)
+  这个是v2rayU最新版
+  https://v2rayu.org/
+  v2rayU的教程`
+  //   --------------------
+};
 const shaoshupaiAndroidData = {};
 
 //   -------------------- 喵喵 --------------------
@@ -289,6 +333,19 @@ const miaomiaoWinData = {
 };
 const miaomiaoMacData = {
   Mac扩展: `mac扩展问题:\n1. 下载软件安装后 点击安装扩展 然后进入电脑的设置 => 通用 => 登陆与扩展 => 网络扩展 => 找到miaomiao => 打开\n2.试试也打开下这个权限 => 点击"隐私与安全性"》"完全磁盘访问权限"》 打开BananaTun的按钮，然后就能使用喵喵啦\n\n有任何问题随时咨询我们噢`,
+  //   --------------------
+  旧版本Mac电脑:`mac老版本下载:
+  https://github.com/W-MS/V2RayX-macOS/releases/download/1.5.1/V2RayX_1.5.1_CHN.zip
+  上面是v2rayX中文版下载地址
+  https://www.bwgss.org/1040.html
+  这个是v2rayX的教程 可以看看 (edited)
+  
+  -------------------
+  
+  https://github.com/yanue/V2rayU/releases/download/v4.2.5/V2rayU-64.dmg (edited)
+  这个是v2rayU最新版
+  https://v2rayu.org/
+  v2rayU的教程`
   //   --------------------
 };
 const miaomiaoAndroidData = {};
