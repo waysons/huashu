@@ -57,6 +57,8 @@ let currentDataSource = "upup";
 let dataSourceTemp = "upup";
 // 通用话术的顺序标注
 let checkLength = 10;
+// 缓存图片
+const imageCache = new Map();
 
 // 创建切换数据源按钮
 function createSwitchButtons() {
@@ -165,20 +167,34 @@ function createButtons(containerId, data) {
 }
 
 // 预加载图片并更新进度条
-function preloadImage(url, btn, name) {
-  return new Promise((resolve, reject) => {
+async function preloadImage(url, btn, name) {
+  return new Promise(async (resolve, reject) => {
+    if (imageCache.has(url)) {
+      btn.textContent = name;
+      btn.style.color = "black";
+      return resolve(imageCache.get(url)); // 返回缓存的 Blob
+    }
+
     const img = new Image();
     img.crossOrigin = "anonymous";
     img.src = url;
     btn.textContent = "加载图片中...";
     btn.style.color = "orange";
-    img.onload = () => {
-      setTimeout(() => {
-        btn.textContent = name;
-        btn.style.color = "black";
-      }, 500);
-      resolve(img);
+
+    img.onload = async () => {
+      try {
+        const blob = await createImageBlob(img); // 转换为 Blob
+        imageCache.set(url, blob); // 存入缓存
+        setTimeout(() => {
+          btn.textContent = name;
+          btn.style.color = "black";
+        }, 500);
+        resolve(blob);
+      } catch (error) {
+        reject(error);
+      }
     };
+
     img.onerror = (err) => {
       btn.textContent = "图片加载失败";
       btn.style.cssText = "color: red";
@@ -186,6 +202,7 @@ function preloadImage(url, btn, name) {
     };
   });
 }
+
 
 // 复制文本
 async function copyToClipboard(text, button) {
@@ -211,34 +228,39 @@ async function copyToClipboard(text, button) {
 
 // 复制图片
 async function copyImage(value, button) {
-  document.body.style.pointerEvents = "none";
   if (!navigator.clipboard || !window.ClipboardItem) {
     alert("当前浏览器不支持图片复制到剪贴板");
     return;
   }
+
   try {
-    const permissionStatus = await navigator.permissions.query({
-      name: "clipboard-write",
-    });
-    if (permissionStatus.state === "denied") {
-      throw new Error("无剪贴板写入权限");
+    let blob;
+    if (imageCache.has(value)) {
+      blob = imageCache.get(value); // 直接使用缓存 Blob
+    } else {
+      blob = await preloadImage(value, button, "图片");
     }
-    const img = await loadImageWithFetch(value);
-    const blob = await createImageBlob(img);
+
+    if (!(blob instanceof Blob)) {
+      throw new Error("缓存中的图片不是 Blob");
+    }
+
     await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+
     if (button) {
       button.disabled = true;
       button.style.backgroundColor = "green";
-      setTimeout(() => (button.style.backgroundColor = ""), 500);
+      setTimeout(() => {
+        button.disabled = false;
+        button.style.backgroundColor = "";
+      }, 500);
     }
   } catch (err) {
     console.error("复制失败:", err);
-    // alert("复制失败! 请重试\n\n请不要过快的切换窗口, 复制网页中的图片需要时间缓存进剪切板");
-  } finally {
-    if (button) button.disabled = false;
   }
-  document.body.style.pointerEvents = "auto";
 }
+
+
 
 // 避免跨域问题
 async function loadImageWithFetch(url) {
