@@ -17,7 +17,6 @@ const flyint1 = `https://to.FlyintPro.com`;
 const flyint2 = `https://www.flyintpro04.com/`;
 const flyint3 = `https://flyintpro06.com`;
 const flyint4 = `https://flyintpro06.pro`;
-const flyint31 = `https://node.flyintpro06.com`;
 const flytint5 = `https://flyintpro08.com/`;
 const flytint6 = `https://flyintpro08.pro/`;
 
@@ -234,7 +233,7 @@ const bananaAndroidData = {};
 const flyintDailyData = {
   最新官网域名: `请收藏好网站发布页哦\n${flyint1}\nPS:点击link1 或 link2 即可跳转到官网`,
   //   --------------------
-  订阅问题: `把订阅连接的域名 >> ${flyint31} 替换成 \n${flyint2}\n或者\n${flyint3} `,
+  订阅问题: `把订阅连接的域名 >> ${flyint4} 替换成 \n${flyint2}\n或者\n${flyint3} `,
   //   --------------------
   复制订阅重新导入: `您试试改下您的订阅地址去重新导入下\n复制订阅地址出来  然后把 旧域名 换成 新域名\n新域名为: ${flytint5}\n(后面的不变 只需要改动域名)\n例如: https://旧的域名/api/v1/client/subscribe?token=1234567890\n改成: https://新的域名/api/v1/client/subscribe?token=1234567890\n\n或者 \n\n订阅地址发我看看, 这边帮您排查下噢`,
   //   --------------------
