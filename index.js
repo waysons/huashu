@@ -292,7 +292,7 @@ async function createImageBlob(img) {
 
 // 跳转开发票文本
 function fapiao() {
-  window.open("http://fp.imwayson.com/", "_blank");
+  window.open("http://fp.wayson.work/", "_blank");
 }
 
 // 更换新的微信背景图
