@@ -165,7 +165,7 @@ const cloudupupWinData = {
 const cloudupupMacData = {
   Mac安装使用upup: `mac 新版客户端下载地址\n mac 版本: https://www.lanzour.com/iAhqS2w1c4wj \n mac arm64版本: https://www.lanzour.com/ins7s2w1bcaj\n  \n  ❗如果无法安装根据客服发的图片步骤来打开权限`,
   //   --------------------
-  upup使用教程图: `./img/win_installupup.png`,
+  upup使用教程图: `./img/mac_installupup.png`,
   //   --------------------
   Mac无法安装图: `./img/mac_cloudupup.png`,
   //   --------------------
