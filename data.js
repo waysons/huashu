@@ -2,7 +2,7 @@
 //   -------------------- 域名 --------------------
 
 const cloudupup1 = `https://cloudupup.net`;
-const cloudupup2 = `https://up04.cloudupup17.com`;
+const cloudupup2 = `https://up02.cloudupup18.com`;
 const cloudupup3 = `https://cloudupup01.cc`;
 const cloudupup4 = `https://help.cloudupup.net`;
 const cloudupup5 = `https://106.52.178.206:9000/auth/login`;
