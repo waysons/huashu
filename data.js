@@ -14,11 +14,11 @@ const banana2 = `https://web.yakoo.one/`;
 const banana3 = `https://go.bananapro.club/`;
 
 const flyint1 = `https://to.FlyintPro.com`;
-const flyint2 = `https://www.flyintpro04.com/`;
-const flyint3 = `https://www.flyintpro08.com`;
-const flyint4 = `https://flyintpro06.pro`;
+const flyint2 = `https://a.flyintpro01.com/`;
+const flyint3 = `https://a.flyintpro02.com`;
+const flyint4 = `https://a.flyintpro03.com`;
 const flytint5 = `https://flyintpro08.com/`;
-const flytint6 = `https://flyintpro08.pro/`;
+const flytint6 = `https://flyintpro0.pro/`;
 
 const shaoshupai1 = `https://sspai.ink`;
 
