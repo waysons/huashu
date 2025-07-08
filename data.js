@@ -15,10 +15,10 @@ const banana3 = `https://go.bananapro.club/`;
 
 const flyint1 = `https://to.FlyintPro.com`;
 const flyint2 = `https://a.flyintpro01.com/`;
-const flyint3 = `https://a.flyintpro02.com`;
-const flyint4 = `https://a.flyintpro03.com`;
-const flytint5 = `https://flyintpro08.com/`;
-const flytint6 = `https://flyintpro0.pro/`;
+const flyint3 = `https://a.flyintpro02.com/`;
+const flyint4 = `https://a.flyintpro03.com/`;
+const flytint5 = `https://a.flyintpro01.com/`;
+const flytint6 = `https://a.flyintpro02.com/`;
 
 const shaoshupai1 = `https://sspai.ink`;
 
