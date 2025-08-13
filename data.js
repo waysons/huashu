@@ -253,6 +253,11 @@ const flyintDailyData = {
   //   --------------------
   专线咨询: `专享线路为定制线路，定制线路800元起每月，一人专享一条企业级高速线路。\n如果您想要定制的话需要先跟客服说您的线路需求后 我们会为您量身定制\n 这边也需要派人和技术去联系开通服务器 \n线路会在付款后的2-3天内为您开通好。`,
   //   --------------------
+  下载地址: `📱 Android：\nhttps://down.flynode.win/apk/com.flyintpro.clash-1.1.5-android.apk\n\n🪟 Windows：\n\nhttps://down.flynode.win/win/com.flyintpro.clash-1.1.5-windows.zip\n\n🍎 macOS（Apple 芯片）：\nhttps://down.flynode.win/mac/FlyintPro-1.1.5-macos-arm64.dmg\n\n🍎 macOS（Intel 芯片）：\nhttps://down.flynode.win/mac/FlyintPro-1.1.5-macos-amd64.dmg\n\n🐧 Linux AppImage（通用免安装）：\nhttps://down.flynode.win/linux/com.flyintpro.clash-1.1.5-linux-appimage.zip\n\n🐧 Linux DEB（Ubuntu/Debian）：\nhttps://down.flynode.win/linux/com.flyintpro.clash-1.1.5-linux-deb.zip\n\n🐧 Linux RPM（CentOS/Fedora）：\nhttps://down.flynode.win/linux/com.flyintpro.clash-1.1.5-linux-rpm.zip`,
+  //   --------------------
+  网络测速: `感觉自己网络不佳的用户 发下以下信息 \n1. YouTube.com 看个4k视频 (最好可以提供详细统计信息)\n2. 自己本地网络访问 speedtest.cn 的测速\n3. 当前所在地区 + 使用的运营商 + 账号\n(如果用的是clash 请提供订阅地址)\n\n私聊发我 这边反馈给技术去排查下`,
+  //   --------------------
+  //   --------------------
 };
 const flyintAppData = generalData;
 const flyintIOSData = {
